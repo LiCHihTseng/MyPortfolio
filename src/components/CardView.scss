@@ -1,0 +1,52 @@
+.container {
+    .cardContainer {
+      gap: 40px;
+      background-color: var(--token-affa1b72-7c43-4531-b217-6ad9a97be289, rgba(255, 255, 255, 0.05));
+      border-radius: 12px;
+      transition: border 0.3s ease; /* Add a smooth transition for border */
+
+      &:hover {
+        border: 2px solid white; /* Change border on hover */
+      }
+  
+      .textContainer {
+        padding: 20px;
+        width: 100%;
+        
+      }
+  
+      .imgContainer {
+        width: 100%; /* Keep container width 100% to take up full space */
+       
+        border-radius: 12px;
+  
+        img {
+          height: 100%;       /* Set the desired height */
+          width: 100%;         /* Let the width adjust to maintain aspect ratio */
+          object-fit: cover;   /* Ensure image covers the container without distortion */
+          border-radius: 12px;
+         
+        }
+      }
+    }
+  
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .cardContainer {
+        flex-direction: column;
+  
+        .imgContainer {
+          height: auto; /* Let image adjust naturally for column layout */
+        }
+      }
+    }
+  }
+  
+  .card-bg{
+    background-color: var(--token-affa1b72-7c43-4531-b217-6ad9a97be289, rgba(255, 255, 255, 0.05));
+  }
+
+  .border-color{
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+  }
