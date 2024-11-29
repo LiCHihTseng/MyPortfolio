@@ -13,15 +13,15 @@
   function App() {
     return (
       <>
-        <NavBar />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project/:id" element={<ProjectDetail />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer/>
-      </>
+      <NavBar />
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+    </>
     );
   }
 
