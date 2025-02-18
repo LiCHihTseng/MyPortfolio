@@ -73,7 +73,7 @@ const Single = ({ item }) => {
 
   return (
     <motion.div
-      className="m-5 grid xl:grid-cols-2 lg:grid-cols-1 cardContainer hover:cursor-pointer"
+      className="xl:m-5 sm:m-1 grid xl:grid-cols-2 lg:grid-cols-1 cardContainer hover:cursor-pointer"
       ref={ref}
       variants={variants}
       initial="initial"
@@ -88,9 +88,9 @@ const Single = ({ item }) => {
     >
       
       <div className="col-span-1 w-full h-full ">
-        <img src={item.img} alt={item.title} className="w-full h-full rounded-lg"/>
+        <img src={item.img} alt={item.title} className="w-full xl:h-full lg:h-90 rounded-lg"/>
       </div>
-      <div className="d-flex flex-col space-between gap-10 ">
+      <div className="d-flex flex-col space-between gap-8 ">
         <div className="textContainer">
           {/* Container for multiple platform tags */}
 
@@ -111,9 +111,9 @@ const Single = ({ item }) => {
             )}
           </div>
           <h1 className="mt-2">{item.title}</h1>
-          <p style={{color: "#BBBBBB"}}>{item.desc}</p>
+          <p style={{color: "#BBBBBB"}} className="mt-4 text-xl">{item.desc}</p>
         </div>
-        <motion.div className="flex justify-end p-5 gap-4 items-center"   initial={{
+        <motion.div className="flex justify-end p-4 m-2 gap-4 items-center"   initial={{
             y: 0,
           }}
           animate={{
@@ -156,7 +156,7 @@ export const CardView = ({}) => {
       </motion.h1>
 
       <div>
-        <div className="justify-content-md-center m-5">
+        <div className="xl:justify-content-md-center xl:m-5 lg:m-0">
           {items.map((item) => (
             <Single item={item} key={item.id} />
           ))}

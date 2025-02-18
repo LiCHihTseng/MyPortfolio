@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <CardView />
-      <div className="" style={{ height: "60vh" }}></div>
+      <CardView className="mb-10"/>
+      <div className=" hidden lg:flex " style={{ height: "60vh" }}></div>
+
     </div>
   );
 };

@@ -1,7 +1,6 @@
-
-
 .navbar {
   height: 100px;
+  font-family: 'Centra', sans-serif !important;
 
   .wrapper {
     max-width: 1366px;
@@ -10,17 +9,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 
+    .logo {
 
-    .social{
+      height: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .social {
       display: flex;
       gap: 40px;
 
-
-      img{
+      img {
         width: 18px;
         height: 18px;
+      }
+    }
+
+    /* 在 lg 以下隱藏社群連結 */
+    @media (max-width: 991px) {
+      .social {
+        display: none;
+      }
+      .logo {
+        margin-left: auto; /* 讓 Logo 靠右 */
       }
     }
   }

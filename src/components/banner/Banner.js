@@ -91,7 +91,7 @@ export const Banner = () => {
                         <span className="wrap">{text}</span>
                       </span>
                     </h1>
-                    <p>
+                    <p className="text-2xl">
                       Currently studying at the University of Queensland, Master
                       of Interaction Design student
                     </p>

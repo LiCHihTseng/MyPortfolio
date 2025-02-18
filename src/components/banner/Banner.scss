@@ -6,7 +6,7 @@
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: calc(100vh - 100px);
+    // height: calc(100vh - 100px);
     overflow: hidden;
   }
   .banner .tagline {
@@ -31,9 +31,9 @@
   }
   .banner p {
     color: #B8B8B8;
-    font-size: 18px;
+
     letter-spacing: 0.8px;
-    line-height: 1.5em;
+
     width: 96%;
   }
   .banner button {
