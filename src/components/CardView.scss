@@ -4,6 +4,9 @@
       background-color: var(--token-affa1b72-7c43-4531-b217-6ad9a97be289, rgba(255, 255, 255, 0.05));
       border-radius: 12px;
       transition: border 0.3s ease; /* Add a smooth transition for border */
+      position: relative;
+      z-index: 1; /* Ensures it is above the circles */
+      border-radius: 12px;
 
       &:hover {
         border: 2px solid white; /* Change border on hover */

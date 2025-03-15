@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./app.scss";
 import { NavBar } from "./components/navbar/NavBar";
+import AnimatedCircleBackground from "./components/Particles";
 import ProjectDetail from "./page/ProjectDetail";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./page/Home";
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <AnimatedCircleBackground />
       <NavBar />
       <AnimatePresence mode="wait">
         <Routes>
