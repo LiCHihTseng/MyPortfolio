@@ -94,7 +94,7 @@ const Links = () => {
       <div className="flex flex-col lg:hidden space-y-3 mt-4">
         <motion.div variants={itemVariants}>
           <motion.a
-            href="https://www.linkedin.com/in/li-chih-tseng-22933319a/"
+            href="https://www.linkedin.com/in/li-chih-tseng-jason-22933319a/"
             className="no-underline text-black"
           >
             <motion.span
@@ -122,7 +122,7 @@ const Links = () => {
         </motion.div>
         <motion.div variants={itemVariants}>
           <motion.a
-            href="https://drive.google.com/file/d/1K5wnMjp5de3kSs0gGXtRwb9IVj5UjUjA/view?usp=sharing"
+            href="https://drive.google.com/file/d/19C9ks2xHv6t2RoBUfbNGKNyOmwajHE3v/view?usp=sharing"
             className="no-underline text-black"
           >
             <motion.span
@@ -130,7 +130,7 @@ const Links = () => {
               whileTap={{ scale: 0.9 }}
               className="inline-block"
             >
-              <p className="">MY CV</p>
+              <p className="">Resume</p>
             </motion.span>
           </motion.a>
         </motion.div>

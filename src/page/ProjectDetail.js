@@ -237,7 +237,8 @@ const items = [
       "In the Aussie Wildlife project, I took on key responsibilities, starting with identifying the target audience and crafting detailed user personas, scenarios, and storyboards. This groundwork ensured our platform was tailored to the needs of children and provided a strong direction for the team. I also contributed to the initial prototyping phase by sketching concepts and gathering feedback to refine our design and website plan.\n\nAs one of the primary developers, I collaborated with my teammate to implement core features, including API integration for dynamic content like kangaroo images and habitat information. I also addressed feedback by implementing a read-aloud function, enhancing accessibility for children who preferred auditory learning. Additionally, I focused on improving interactivity through features like kangaroo customization and map exploration, ensuring the final product was both engaging and educational. My efforts helped align the project with our goals and the needs of our target audience.",
     initial_user_test:
       "Our early design concept for AussieWildlife sought to create a fun and interactive educational platform to promote an appreciation for Australian wildlife among children. While the initial sketches and paper prototype focused on simple map interactions and species information, user feedback revealed that young users desired a more engaging and playful experience that would allow for exploration and learning through interaction.\n\nFor instance, early testers found static content delivery (e.g., images and text) insufficiently immersive. This feedback led us to integrate gamification elements, such as a customizable kangaroo character and an interactive map with flag icons that link to species-specific information. Additionally, we decided to incorporate a quiz feature, enabling children to test their knowledge and reinforce what they learned. This insight was instrumental in transforming AussieWildlife into an engaging platform tailored to children's learning preferences.",
-    user_test_title: "Iterative Refinement Through Prototyping and User Feedback",
+    user_test_title:
+      "Iterative Refinement Through Prototyping and User Feedback",
     user_test_desc:
       "We employed mixed methods, including paper prototyping, digital prototype evaluations, and feedback sessions with peers and tutors, to gather insights into user preferences and interaction patterns. These methods helped us iteratively refine the platform's design, ensuring it met the needs of our target audience.",
     key_findings: [
@@ -372,26 +373,30 @@ const ProjectDetail = () => {
     projectItem.short_img2.endsWith(".svg");
   return (
     <div
-      className="container mx-auto projectContainer mt-10 overflow-visible static "
+      className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 overflow-hidden"
       variants={textVariants}
       initial="initial"
       animate="animate"
     >
-      <motion.h1 variants={textVariants} initial="initial" animate="animate">
+      <motion.h1
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-left sm:text-left"
+      >
         {projectItem.title}
       </motion.h1>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-6 sm:mt-8 lg:mt-10 flex justify-center">
         {isSVG ? (
           <img
             src={projectItem.img}
             alt={projectItem.title}
-            className="w-1/2 h-1/3 object-fit rounded-md"
+            className="w-full sm:w-2/3 lg:w-1/2 h-auto object-cover rounded-lg"
           />
         ) : (
           <Lottie
             options={defaultOptions}
-            className="w-full h-full object-fit rounded-md"
-            style={{ borderRadius: "1.5rem" }}
+            className="w-full sm:w-2/3 lg:w-1/2 min-h-[300px] sm:min-h-[250px] lg:h-auto object-cover rounded-lg"
           />
         )}
       </div>
@@ -401,23 +406,28 @@ const ProjectDetail = () => {
         keywords={projectItem.keywords}
       />
 
+      {/* Roles Section */}
       <motion.div
-        className="grid xl:grid-cols-4 lg:grid-cols-2 m-5 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-4 sm:mx-6 lg:mx-8 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 lg:mt-10"
         ref={ref}
         variants={variants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        {/* Filter the roles array to match the current project's ID */}
         {Roles.filter((role) => role.id === parseInt(id)).map((roleData) => (
           <React.Fragment key={roleData.id}>
             {/* MY ROLE Section */}
             <div>
-              <h5>{roleData.role}</h5>
-              <div className="flex-col mt-4">
+              <h5 className="text-lg sm:text-1xl lg:text-2xl">
+                {roleData.role}
+              </h5>
+              <div className="flex-col mt-4 space-y-2">
                 {roleData.role_content.map((content, index) => (
-                  <p className="text-des" key={`role-${index}`}>
+                  <p
+                    className="text-des font-light text-base sm:text-lg lg:text-xl"
+                    key={`role-${index}`}
+                  >
                     {content}
                   </p>
                 ))}
@@ -426,10 +436,15 @@ const ProjectDetail = () => {
 
             {/* TEAM Section */}
             <div>
-              <h5>{roleData.team}</h5>
-              <div className="flex-col mt-4">
+              <h5 className="text-lg sm:text-1xl lg:text-2xl">
+                {roleData.team}
+              </h5>
+              <div className="flex-col mt-4 space-y-2">
                 {roleData.team_content.map((content, index) => (
-                  <p className="text-des" key={`team-${index}`}>
+                  <p
+                    className="text-des font-light text-base sm:text-lg lg:text-xl"
+                    key={`team-${index}`}
+                  >
                     {content}
                   </p>
                 ))}
@@ -438,10 +453,15 @@ const ProjectDetail = () => {
 
             {/* YEAR Section */}
             <div>
-              <h5>{roleData.year}</h5>
-              <div className="flex-col mt-4">
+              <h5 className="text-lg sm:text-1xl lg:text-2xl">
+                {roleData.year}
+              </h5>
+              <div className="flex-col mt-4 space-y-2">
                 {roleData.year_content.map((content, index) => (
-                  <p className="text-des" key={`year-${index}`}>
+                  <p
+                    className="text-des font-light text-base sm:text-lg lg:text-xl"
+                    key={`year-${index}`}
+                  >
                     {content}
                   </p>
                 ))}
@@ -450,10 +470,15 @@ const ProjectDetail = () => {
 
             {/* TOOLS Section */}
             <div>
-              <h5>{roleData.title}</h5>
-              <div className="flex-col mt-4">
+              <h5 className="text-lg sm:text-1xl lg:text-2xl">
+                {roleData.title}
+              </h5>
+              <div className="flex-col mt-4 space-y-2">
                 {roleData.content.map((content, index) => (
-                  <p className="text-des" key={`tool-${index}`}>
+                  <p
+                    className="text-des font-light text-base sm:text-lg lg:text-xl"
+                    key={`tool-${index}`}
+                  >
                     {content}
                   </p>
                 ))}
@@ -463,26 +488,30 @@ const ProjectDetail = () => {
         ))}
       </motion.div>
 
+      {/* Project Summary Section */}
       <motion.div
-        className="grid lg:grid-cols-2 m-5 md:grid-cols-1"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-4 sm:mx-6 lg:mx-8 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 lg:mt-10"
         ref={ref}
         variants={variants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h5>Project Summary</h5>
-        <div>
+        <h5 className="text-2xl sm:text-3xl lg:text-4xl">Project Summary</h5>
+        <div className="space-y-4">
           {projectItem.project_sum.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-des mt-4">
+            <p
+              key={index}
+              className="text-des font-light text-base sm:text-lg lg:text-xl"
+            >
               {paragraph}
             </p>
           ))}
-          <div className="flex space-x-4 items-center mt-10">
+          <div className="flex space-x-4 items-center mt-6 sm:mt-8 lg:mt-10">
             <a
               href={projectItem.video_link}
               target="_blank"
-              className="hover:cursor-pointer space-x-4 text-white text-2xl"
+              className="hover:cursor-pointer space-x-4 text-white text-lg sm:text-xl lg:text-2xl"
             >
               {projectItem.video_title}
             </a>
@@ -491,240 +520,268 @@ const ProjectDetail = () => {
         </div>
       </motion.div>
 
-      <div className="flex rounded-lg items-center justify-center">
+      {/* Image Section */}
+      <div className="flex rounded-lg items-center justify-center mt-6 sm:mt-8 lg:mt-10">
         <img
           src={projectItem.img_2}
           alt=""
-          className="rounded-lg w-2/3 h-2/3"
-        ></img>
+          className="w-full sm:w-3/4 lg:w-2/3 h-auto rounded-lg"
+        />
       </div>
 
-      <div className="" style={{ height: "10vh" }}></div>
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
 
+      {/* Problem Statements Section */}
       <div
-        className="grid lg:grid-cols-2 m-5 md:grid-cols-1 "
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-4 sm:mx-6 lg:mx-8 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 lg:mt-10"
         ref={ref}
         variants={variants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h5>{projectItem.problem_statements_title}</h5>
-        <p className="text-des">{projectItem.problem_statements}</p>
+        <h5 className="text-2xl sm:text-3xl lg:text-4xl">
+          {projectItem.problem_statements_title}
+        </h5>
+        <p className="text-des font-light text-base sm:text-lg lg:text-xl">
+          {projectItem.problem_statements}
+        </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 m-5 md:grid-cols-1">
-        <h5>Users And Need</h5>
-        <div className="gap-2">
+      {/* Users And Need Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-4 sm:mx-6 lg:mx-8 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 lg:mt-10">
+        <h5 className="text-2xl sm:text-3xl lg:text-4xl">Users And Need</h5>
+        <div className="space-y-4">
           {projectItem.user_need.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-des">
+            <p
+              key={index}
+              className="text-des font-light text-base sm:text-lg lg:text-xl"
+            >
               {paragraph}
             </p>
           ))}
         </div>
       </div>
 
+      {/* My Role Section */}
       <div
-        className="grid lg:grid-cols-2 m-5 md:grid-cols-1"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-4 sm:mx-6 lg:mx-8 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8 lg:mt-10"
         ref={ref}
         variants={variants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h5>My Role</h5>
-        <div>
+        <h5 className="text-xl sm:text-2xl lg:text-3xl">My Role</h5>
+        <div className="space-y-4">
           {projectItem.my_role.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-des">
+            <p
+              key={index}
+              className="text-des font-light text-base sm:text-lg lg:text-xl"
+            >
               {paragraph}
             </p>
           ))}
         </div>
       </div>
-      <div className="mt-10">
+
+      {/* Slider Section */}
+      <div className="mt-6 sm:mt-8 lg:mt-10">
         <Slider keywords={projectItem.slider_img} />
       </div>
 
-      <div className="" style={{ height: "20vh" }}></div>
-      <div>
-        <div
-          ref={ref}
-          variants={variants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <h2>Key features</h2>
-          {projectItem.project_highlights.map((highlight) => (
-            <div
-              key={highlight.key}
-              className="flex flex-column p-4 items-center mt-5"
-            >
-              <h4 className="font-semibold items-center justify-center text-gray-300">
-                {highlight.key}
-              </h4>
-              <div className="lg:w-1/2 md:w-full">
-                <p className="text-des">{highlight.description}</p>{" "}
-                {/* Display the description */}
-              </div>
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
 
-              <div className="flex flex-row items-center justify-center mt-8">
-                <div className="basis-4/5">
-                  <Lottie
-                    options={keyfeatureOptions(highlight.img)} // Use the img from the highlight
-                    style={{
-                      height: "100%",
-                      borderRadius: "0.5rem",
-                    }}
-                  />
-                </div>
-              </div>
+      {/* Key Features Section */}
+      <div
+        ref={ref}
+        variants={variants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl mx-4 sm:mx-6 lg:mx-8">
+          Key Features
+        </h2>
+        {projectItem.project_highlights.map((highlight) => (
+          <div
+            key={highlight.key}
+            className="flex flex-col p-4 items-center mt-6 sm:mt-8 lg:mt-10"
+          >
+            <h4 className="font-semibold items-center justify-center text-gray-300 text-xl sm:text-2xl lg:text-3xl">
+              {highlight.key}
+            </h4>
+            <div className="w-full lg:w-2/3 mt-4">
+              <p className="text-des font-light text-base sm:text-lg lg:text-xl text-center lg:text-left">
+                {highlight.description}
+              </p>
             </div>
-          ))}
-        </div>
-
-        <div className="" style={{ height: "20vh" }}></div>
-
-        <div className="mt-8">
-          <h2>Feedbck are everywhere</h2>
-          <div className="flex flex-wrap mt-5">
-            <div className="flex justify-center item-center xl:basis-2/5 xl:order-2 md:basis-1/2">
+            <div className="w-full sm:w-3/4 lg:w-1/2 mt-6 sm:mt-8 lg:mt-10">
               <Lottie
-                options={defaultOptions2}
-                // height={96}
-                // width={96}
-                className="object-fit"
+                options={keyfeatureOptions(highlight.img)}
+                style={{
+                  height: "100%",
+                  borderRadius: "0.5rem",
+                }}
+                className="w-full h-auto object-cover rounded-lg"
               />
             </div>
+          </div>
+        ))}
+      </div>
 
-            <div className="xl:basis-3/5 xl:order-1">
-              {projectItem.initial_user_test
-                .split("\n\n")
-                .map((paragraph, index) => (
-                  <p key={index} className="text-des">
-                    {paragraph}
-                  </p>
-                ))}
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
+
+      {/* Feedback Section */}
+      <div className="mt-6 sm:mt-8 lg:mt-10 mx-4 sm:mx-6 lg:mx-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl">
+          Feedback Are Everywhere
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-6 sm:mt-8 lg:mt-10 gap-6 sm:gap-8 lg:gap-10">
+          {/* 文字區域，桌面尺寸放在左邊 */}
+          <div className="space-y-4">
+            {projectItem.initial_user_test
+              .split("\n\n")
+              .map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-des font-light text-base sm:text-lg lg:text-xl"
+                >
+                  {paragraph}
+                </p>
+              ))}
+          </div>
+          {/* Lottie 動畫區域，桌面尺寸放在右邊 */}
+          <div className="flex justify-center items-center">
+            <Lottie
+              options={defaultOptions2}
+              className="relative w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
+
+      {/* User Evaluation & Test Section */}
+      <div className="mx-4 sm:mx-6 lg:mx-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl">
+          User Evaluation & User Test
+        </h2>
+        <h5 className="mt-4 sm:mt-6 lg:mt-8 text-xl sm:text-2xl lg:text-3xl">
+          {projectItem.user_test_title}
+        </h5>
+        <p className="text-des font-light text-base sm:text-lg lg:text-xl mt-4">
+          {projectItem.user_test_desc}
+        </p>
+        <div className="mt-6 sm:mt-8 lg:mt-10">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl">Key Findings</h3>
+          <div className="flex flex-col md:flex-row mt-6 sm:mt-8 lg:mt-10 gap-6 sm:gap-8 lg:gap-10">
+            <div className="w-full md:w-1/2 flex justify-center">
+              <Lottie
+                options={defaultOptions3}
+                className="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+              />
+            </div>
+            <div className="w-full md:w-1/2">
+              <ul style={{ paddingLeft: "20px" }}>
+                {projectItem.key_findings.map((highlight, index) => {
+                  const parts = highlight.split(":");
+                  const boldText = parts[0];
+                  const restText = parts[1] ? parts[1] : "";
+                  return (
+                    <li
+                      key={index}
+                      className="flex p-1 items-center text-des font-light text-base sm:text-lg lg:text-xl"
+                    >
+                      <FontAwesomeIcon icon={faCircle} className="fa-2xs" />
+                      <span className="ml-5">
+                        <strong className="text-white">{boldText}</strong>
+                        {restText && `: ${restText}`}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="" style={{ height: "20vh" }}></div>
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
 
-        <div>
-          <h2 className="mt-5">User evaluation & User test</h2>
-          <h5 className="mt-5">{projectItem.user_test_title}</h5>
-          <p className="text-des">{projectItem.user_test_desc}</p>
-          <div className="mt-5 ">
-            <div>
-              <h3>Key Findings</h3>
-              <div className="flex flex-wrap mt-5">
-                <div className="flex justify-center xl:basis-2/5 xl:order-2  md:basis-1/2">
-                  <Lottie
-                    options={defaultOptions3}
-                    className="object-cover rounded-lg"
-                    style={{ height: "20.75rem", width: "25rem" }}
-                  />
-                </div>
-
-                {/* List of key findings */}
-                <div className="xl:basis-3/5 xl:order-1 md:">
-                  <ul style={{ paddingLeft: "20px" }}>
-                    {projectItem.key_findings.map((highlight, index) => {
-                      // Split the highlight into parts using colon (:) as the separator
-                      const parts = highlight.split(":");
-                      const boldText = parts[0]; // Text before the colon
-                      const restText = parts[1] ? parts[1] : ""; // Text after the colon, if it exists
-
-                      return (
-                        <li
-                          key={index}
-                          className="flex p-1 items-center text-des"
-                        >
-                          <FontAwesomeIcon icon={faCircle} className="fa-2xs" />
-                          <span className="ml-5">
-                            <strong className="text-white">{boldText}</strong>
-                            {restText && `: ${restText}`}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </div>
+      {/* Short Images Section */}
+      <div className="mx-4 sm:mx-6 lg:mx-8">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8">
+          <div className="w-full sm:w-1/2">
+            {isshort1SVG ? (
+              <img
+                src={projectItem.short_img1}
+                alt=""
+                className="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+              />
+            ) : (
+              <Lottie
+                options={defaultOptions4}
+                className="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+              />
+            )}
+          </div>
+          <div className="w-full sm:w-1/2">
+            {isshort2SVG ? (
+              <img
+                src={projectItem.short_img2}
+                alt=""
+                className="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+              />
+            ) : (
+              <Lottie
+                options={defaultOptions5}
+                className="w-full h-auto max-h-[300px] sm:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
+              />
+            )}
           </div>
         </div>
+      </div>
 
-        <div className="" style={{ height: "20vh" }}></div>
-        <div className="">
-          <div className="flex flex-wrap  gap-2">
-            <div className="flex-auto xl:w-60 lg:w-90 lg: h-90 rounded-lg">
-              {isshort1SVG ? (
-                <img
-                  src={projectItem.short_img1}
-                  alt=""
-                  className="w-full h-full object-cover rounded-md"
-                />
-              ) : (
-                <Lottie
-                  options={defaultOptions4}
-                  className="rounded-md"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "1rem",
-                  }}
-                />
-              )}
-            </div>
-            <div className="flex-auto xl:w-60 lg:w-90 lg:h-90 rounded-lg ">
-              {isshort2SVG ? (
-                <img
-                  src={projectItem.short_img2}
-                  alt=""
-                  className="w-full h-full object-cover rounded-md"
-                />
-              ) : (
-                <Lottie
-                  options={defaultOptions5}
-                  style={{
-                    width: "100%", // Ensures the animation spans the container width
-                    height: "100%", // Matches the container height
-                    borderRadius: "1rem",
-                  }}
-                  className="rounded-md" // Apply Tailwind for consistent border-radius styling
-                />
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <h3>Conclusion</h3>
+      {/* Conclusion Section */}
+      <div className="mx-4 sm:mx-6 lg:mx-8 mt-6 sm:mt-8 lg:mt-10">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl">Conclusion</h3>
+        <div className="space-y-4 mt-4">
           {projectItem.conclusion.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="text-des">
+            <p
+              key={index}
+              className="text-des font-light text-base sm:text-lg lg:text-xl"
+            >
               {paragraph}
             </p>
           ))}
         </div>
-
-        <div className="" style={{ height: "20vh" }}></div>
-        <div className="flex justify-end items-end m-5 ">
-          <motion.div
-            className="rounded-full"
-            whileHover={{
-              scaleX: 1.1,
-              transition: { duration: 0.8 }, // Fixed syntax here
-            }}
-            style={{ backgroundColor: "#333338" }}
-          >
-            <NextProjectButton/>
-          </motion.div>
-        </div>
-
-        <div className="" style={{ height: "60vh" }}></div>
       </div>
+
+      {/* Spacer */}
+      <div className="h-[10vh] sm:h-[15vh] lg:h-[20vh]"></div>
+
+      {/* Next Project Button */}
+      <div className="flex justify-end items-end mx-4 sm:mx-6 lg:mx-8 mt-6 sm:mt-8 lg:mt-10">
+        <motion.div
+          className="rounded-full"
+          whileHover={{
+            scaleX: 1.1,
+            transition: { duration: 0.8 },
+          }}
+          style={{ backgroundColor: "#333338" }}
+        >
+          <NextProjectButton />
+        </motion.div>
+      </div>
+
+      <div className="" style={{ height: "60vh" }}></div>
     </div>
   );
 };
