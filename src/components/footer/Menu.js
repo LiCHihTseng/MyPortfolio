@@ -4,7 +4,7 @@ export const PRODUCTS = [
   { name: "Aussie Wildlife", link: "/project/3" },
 ];
 export const RESOURCES = [
-  { name: "LinkedIn", link: "https://www.linkedin.com/in/li-chih-tseng-22933319a/c" },
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/li-chih-tseng-jason-22933319a/" },
   { name: "Email", link: "mailto:zxcjason234@gmail.com?subject=Subject&body=Message" },
-  { name: "CV", link: "https://drive.google.com/file/d/1K5wnMjp5de3kSs0gGXtRwb9IVj5UjUjA/view?usp=sharing" },
+  { name: "Resume", link: "https://drive.google.com/file/d/19C9ks2xHv6t2RoBUfbNGKNyOmwajHE3v/view?usp=sharing" },
 ];
