@@ -1,17 +1,16 @@
 .navbar {
   height: 100px;
   font-family: 'Centra', sans-serif !important;
+  display: flex !important; /* 確保 Flex 佈局，避免 Bootstrap 干擾 */
+  padding: 0 !important; /* 移除可能的 padding */
 
   .wrapper {
-    max-width: 1366px;
+    
     width: 100%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
 
     .logo {
-
       height: auto;
       transition: all 0.3s ease-in-out;
     }
@@ -26,13 +25,13 @@
       }
     }
 
-    /* 在 lg 以下隱藏社群連結 */
+    /* 在 lg 以下隱藏社群連結，並讓 logo 靠右 */
     @media (max-width: 991px) {
       .social {
         display: none;
       }
       .logo {
-        margin-left: auto; /* 讓 Logo 靠右 */
+        margin-left: auto !important; /* 增加優先級確保靠右 */
       }
     }
   }

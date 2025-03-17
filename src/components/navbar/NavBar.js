@@ -23,16 +23,16 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Container className="navbar">
+    <Container className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <Sidebar />
 
-      <div className="wrapper">
+      <div className="wrapper flex justify-end lg:justify-between lg:max-w-[1366px]">
         {/* Logo (lg 以下靠右, lg 以上正常) */}
         <Link to="/">
           <motion.img
             src={logo}
             alt="Logo"
-            className="logo"
+            className="logo lg:ml-0 ml-auto" // Tailwind 增強靠右對齊
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
