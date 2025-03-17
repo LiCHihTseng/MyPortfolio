@@ -11,21 +11,21 @@ import AussieWild from "../assets/img/AussieWildlife.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const variants = {
-  initial: {
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
+// const variants = {
+//   initial: {
+//     y: 100,
+//     opacity: 0,
+//   },
+//   animate: {
+//     x: 0,
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 1,
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
 
 const items = [
   {
@@ -61,13 +61,18 @@ const Single = ({ item }) => {
 
   return (
     <motion.div
-      className="m-2 sm:m-4 xl:m-6 grid grid-cols-1 xl:grid-cols-2 cardContainer cursor-pointer overflow-hidden bg-gray-800/20 rounded-xl sm:hover:border-2 sm:hover:border-white sm:hover:shadow-xl transition-all duration-300 ease-in-out"
-      ref={ref}
-      variants={variants}
-      initial="initial"
-      whileInView="animate"
-      transition={{ duration: 0.5 }}
-      onClick={handleClick}
+      className="m-2 sm:m-4 xl:m-6 grid grid-cols-1 xl:grid-cols-2 cardContainer cursor-pointer overflow-hidden bg-gray-800/20 rounded-xl sm:hover:border-2 sm:hover:border-white sm:hover:shadow-xl "
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+          staggerChildren: 0.1,
+        },
+      }}
+      viewport={{ once: true, amount: "some" }}
     >
       <div className="w-full h-auto xl:h-full">
         <img
@@ -135,25 +140,12 @@ export const CardView = () => {
 
   return (
     <Container id="Projects" className="max-w-[1366px] mx-auto w-full">
-      <motion.h1
-        variants={variants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-6 sm:mb-8"
-      >
+      <motion.h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-6 sm:mb-8">
         My Project
       </motion.h1>
 
       <div className="flex flex-col items-center w-full">
-        <motion.div
-          className="w-full xl:justify-center m-0 sm:m-2"
-          style={{
-            scale: scaleProgress,
-            opacity: opacityProgress,
-          }}
-          ref={ref}
-        >
+        <motion.div className="w-full xl:justify-center m-0 sm:m-2">
           {items.map((item) => (
             <Single item={item} key={item.id} />
           ))}
