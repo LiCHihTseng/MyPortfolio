@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.792aa70d.css",
-    "main.js": "/MyPortfolio/static/js/main.ae75f52e.js",
+    "main.css": "/MyPortfolio/static/css/main.f00ff7b5.css",
+    "main.js": "/MyPortfolio/static/js/main.acce13d1.js",
     "static/js/453.1a1d9ac0.chunk.js": "/MyPortfolio/static/js/453.1a1d9ac0.chunk.js",
     "static/media/SlideyoUQuest3.svg": "/MyPortfolio/static/media/SlideyoUQuest3.e876167224014f01e316561873613da0.svg",
     "static/media/SlideyoUQuest2.svg": "/MyPortfolio/static/media/SlideyoUQuest2.76523c85bcf8aa79dd4b4332e54f4db4.svg",
@@ -20,7 +20,6 @@
     "static/media/YouUquest_img1.svg": "/MyPortfolio/static/media/YouUquest_img1.38835f230a19876e795679284cde23e1.svg",
     "static/media/InSync-Slider1.svg": "/MyPortfolio/static/media/InSync-Slider1.68bf6ae3373956e59a9c1b26ba44f52a.svg",
     "static/media/Centra No2 Light.ttf": "/MyPortfolio/static/media/Centra No2 Light.46fba3a0010b1f89451a.ttf",
-    "static/media/header-img.svg": "/MyPortfolio/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
     "static/media/AussieWildlife.png": "/MyPortfolio/static/media/AussieWildlife.7d1dc0ca64624ea8a44e.png",
     "static/media/CentraNo2-Bold.ttf": "/MyPortfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/MyPortfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
@@ -29,12 +28,12 @@
     "static/media/yoUQuest.png": "/MyPortfolio/static/media/yoUQuest.6c574e0805cad396e734.png",
     "static/media/Jason.svg": "/MyPortfolio/static/media/Jason.a2e059706b74d3e5b14e9c547a7ec2a0.svg",
     "index.html": "/MyPortfolio/index.html",
-    "main.792aa70d.css.map": "/MyPortfolio/static/css/main.792aa70d.css.map",
-    "main.ae75f52e.js.map": "/MyPortfolio/static/js/main.ae75f52e.js.map",
+    "main.f00ff7b5.css.map": "/MyPortfolio/static/css/main.f00ff7b5.css.map",
+    "main.acce13d1.js.map": "/MyPortfolio/static/js/main.acce13d1.js.map",
     "453.1a1d9ac0.chunk.js.map": "/MyPortfolio/static/js/453.1a1d9ac0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.792aa70d.css",
-    "static/js/main.ae75f52e.js"
+    "static/css/main.f00ff7b5.css",
+    "static/js/main.acce13d1.js"
   ]
 }
