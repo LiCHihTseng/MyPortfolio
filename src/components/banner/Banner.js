@@ -110,12 +110,17 @@ export const Banner = () => {
 
           <Row className="justify-center ">
             <Col md="auto" className="flex justify-center ">
-              <button
+              <motion.button
+                  whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
                 onClick={() => (window.location.href = "mailto:zxcjason234@gmail.com")}
-                className="bg-purple-800 text-white font-bold text-lg py-2 px-4 rounded-lg flex items-center hover:bg-purple-700 transition duration-300"
+                className="bg-purple-800 text-white font-bold text-lg py-2 px-4 rounded-lg flex items-center hover:bg-purple-700"
               >
-                Contact me! <ArrowRightCircle size={25} className="ml-2 transition-transform hover:ml-6" />
-              </button>
+                Contact me! <ArrowRightCircle size={25} className="ml-2" />
+              </motion.button>
             </Col>
           </Row>
         </Container>
