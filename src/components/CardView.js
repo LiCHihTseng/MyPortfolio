@@ -73,6 +73,7 @@ const Single = ({ item }) => {
         },
       }}
       viewport={{ once: true, amount: "some" }}
+      onClick={handleClick}
     >
       <div className="w-full h-auto xl:h-full">
         <img

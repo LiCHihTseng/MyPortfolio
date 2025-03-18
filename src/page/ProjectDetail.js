@@ -228,7 +228,7 @@ const items = [
     ],
     video_title: "View More",
     video_link: "https://github.com/ChiaWen-Kao/DECO7180-Aussie_Wildlife",
-    problem_statements_title: "THE WHAT",
+    problem_statements_title: "The What",
     problem_statements:
       "Aussie Wildlife is a gamified educational platform designed to immerse users in the rich biodiversity of Australia. By combining interactive RPG-style adventures with engaging educational content, it allows students, educators, and nature enthusiasts to explore diverse ecosystems and learn about native fauna in an exciting and meaningful way.\n\nThrough this dynamic platform, users can discover the unique roles Australian wildlife play in their ecosystems, fostering both knowledge and a deeper appreciation for conservation.",
     user_need:
@@ -573,7 +573,7 @@ const ProjectDetail = () => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h5 className="text-xl sm:text-2xl lg:text-3xl">My Role</h5>
+        <h5 className="text-2xl sm:text-3xl lg:text-4xl">My Role</h5>
         <div className="space-y-4">
           {projectItem.my_role.split("\n\n").map((paragraph, index) => (
             <p
