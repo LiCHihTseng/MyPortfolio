@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/MyPortfolio/static/css/main.2151d824.css",
-    "main.js": "/MyPortfolio/static/js/main.cca3ab9f.js",
+    "main.js": "/MyPortfolio/static/js/main.b66ce56e.js",
     "static/js/453.1a1d9ac0.chunk.js": "/MyPortfolio/static/js/453.1a1d9ac0.chunk.js",
     "static/media/SlideyoUQuest3.svg": "/MyPortfolio/static/media/SlideyoUQuest3.e876167224014f01e316561873613da0.svg",
     "static/media/SlideyoUQuest2.svg": "/MyPortfolio/static/media/SlideyoUQuest2.76523c85bcf8aa79dd4b4332e54f4db4.svg",
-    "static/media/InSync-Slider2.svg": "/MyPortfolio/static/media/InSync-Slider2.f51771f32c5e617e3d2d9808e6f8ce1c.svg",
     "static/media/SlideyoAussie2.svg": "/MyPortfolio/static/media/SlideyoAussie2.cb749eb1527297b47ba71e808b47705c.svg",
     "static/media/SlideyoUQuest1.svg": "/MyPortfolio/static/media/SlideyoUQuest1.e45e673af39f10aca06edbee0a1b97c5.svg",
     "static/media/InSync-photoframe.svg": "/MyPortfolio/static/media/InSync-photoframe.8ed74ceee7aea8df95071886228f096a.svg",
@@ -29,11 +28,11 @@
     "static/media/Jason.svg": "/MyPortfolio/static/media/Jason.a2e059706b74d3e5b14e9c547a7ec2a0.svg",
     "index.html": "/MyPortfolio/index.html",
     "main.2151d824.css.map": "/MyPortfolio/static/css/main.2151d824.css.map",
-    "main.cca3ab9f.js.map": "/MyPortfolio/static/js/main.cca3ab9f.js.map",
+    "main.b66ce56e.js.map": "/MyPortfolio/static/js/main.b66ce56e.js.map",
     "453.1a1d9ac0.chunk.js.map": "/MyPortfolio/static/js/453.1a1d9ac0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2151d824.css",
-    "static/js/main.cca3ab9f.js"
+    "static/js/main.b66ce56e.js"
   ]
 }
