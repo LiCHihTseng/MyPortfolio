@@ -21,7 +21,7 @@ import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 import Insync_photoframe from "../assets/img/InSync-photoframe.svg";
 import InSync_photo from "../assets/img/InSync-Photo.svg";
 import SliderImage1 from "../assets/img/InSync-Slider1.svg";
-import SliderImage2 from "../assets/img/InSync-Slider1.svg";
+import SliderImage2 from "../assets/img/InSync-Slider2.svg";
 import SliderImage3 from "../assets/img/InSync-Slider3.svg";
 import Lottie from "react-lottie";
 import InsyncAnimation from "../assets/img/GIF/InSync";
