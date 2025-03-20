@@ -10,10 +10,10 @@ const NextProjectButton = () => {
   const currentId = parseInt(id) || 1; // 当前项目 ID，默认为 1
 
   const handleNextProject = () => {
-    const nextId = (currentId % totalProjects) + 1; // 计算下一个项目 ID
-    navigate(`/project/${nextId}`); // 导航到下一个项目
+    const nextId = (currentId % totalProjects) + 1;
+    navigate(`/project/${nextId}`);
+    setTimeout(() => window.scrollTo(0, 0), 0); // Scroll to top after navigation
   };
-
   return (
     <div className="flex justify-center items-center p-4 gap-4" onClick={handleNextProject}>
       {/* 替换成 <button>，避免 <a> 的默认跳转行为 */}
